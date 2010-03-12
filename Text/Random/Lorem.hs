@@ -2,19 +2,11 @@
 module Text.Random.Lorem  where
 
 import Data.Char
-import System.Random
+import Test.QuickCheck
+import System.Random.Shuffle
 
-
-import System.Random hiding (next)
-
-
-nth n xs = head $ drop (n-1) xs
-
+lastIndex :: [a] -> Int
 lastIndex xs = (length xs) - 1
-
-randomList r = do g <- getStdGen
-return $ randomRs r g
-
                   
 
 
